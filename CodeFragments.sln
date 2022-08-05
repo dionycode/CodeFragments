@@ -3,9 +3,90 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{F1A59FC3-416D-467A-902F-EE66C6E5DC32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{0B03EB4D-16E1-410B-BFBA-8546BE851E33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{2643745E-FE6F-4497-AE87-613089BC459E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTAPI", "src\Backend\API\RESTAPI\RESTAPI.csproj", "{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsoleApp1", "src\Backend\CSharp\Test\TestConsoleApp1\TestConsoleApp1.csproj", "{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicConsoleApp", "src\Backend\CSharp\BasicConsoleApp\BasicConsoleApp.csproj", "{09147DBD-5A59-41A5-9C15-2A9D9FC631FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JavaScript", "JavaScript", "{9275544C-4CA4-4FE5-BA11-60309D987721}"
+	ProjectSection(SolutionItems) = preProject
+		src\FrontEnd\JavaScript\ModernJavaScriptNotes.js = src\FrontEnd\JavaScript\ModernJavaScriptNotes.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "class", "class", "{E01265DD-9513-4CCB-93FC-6E7A2F429E25}"
+	ProjectSection(SolutionItems) = preProject
+		src\FrontEnd\JavaScript\class\class-one.js = src\FrontEnd\JavaScript\class\class-one.js
+		src\FrontEnd\JavaScript\class\class-two.js = src\FrontEnd\JavaScript\class\class-two.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReactJS", "ReactJS", "{B9BBDC24-EB0D-4E14-8529-99B13F322110}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95AD4052-BC02-4560-A830-D3D2FCD9B5F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{6F7F5B67-26C2-45DA-B1B7-7EF522530FA2}"
+	ProjectSection(SolutionItems) = preProject
+		src\FrontEnd\JavaScript\modules\company.js = src\FrontEnd\JavaScript\modules\company.js
+		src\FrontEnd\JavaScript\modules\main.js = src\FrontEnd\JavaScript\modules\main.js
+		src\FrontEnd\JavaScript\modules\module.html = src\FrontEnd\JavaScript\modules\module.html
+		src\FrontEnd\JavaScript\modules\person.js = src\FrontEnd\JavaScript\modules\person.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spread", "spread", "{773FDD11-249D-4BFF-80CF-0C7453622108}"
+	ProjectSection(SolutionItems) = preProject
+		src\FrontEnd\JavaScript\spreadoperator\spread.js = src\FrontEnd\JavaScript\spreadoperator\spread.js
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPConsole31", "src\Patterns\OOPConsole31\OOPConsole31.csproj", "{798DF1DC-9E90-4A31-A6B6-063F01E5F901}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09147DBD-5A59-41A5-9C15-2A9D9FC631FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09147DBD-5A59-41A5-9C15-2A9D9FC631FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09147DBD-5A59-41A5-9C15-2A9D9FC631FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09147DBD-5A59-41A5-9C15-2A9D9FC631FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798DF1DC-9E90-4A31-A6B6-063F01E5F901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798DF1DC-9E90-4A31-A6B6-063F01E5F901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798DF1DC-9E90-4A31-A6B6-063F01E5F901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798DF1DC-9E90-4A31-A6B6-063F01E5F901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B2CB7D6-84C2-4414-A6C1-6BBC1B879958} = {2643745E-FE6F-4497-AE87-613089BC459E}
+		{F1A59FC3-416D-467A-902F-EE66C6E5DC32} = {95AD4052-BC02-4560-A830-D3D2FCD9B5F3}
+		{0B03EB4D-16E1-410B-BFBA-8546BE851E33} = {95AD4052-BC02-4560-A830-D3D2FCD9B5F3}
+		{2643745E-FE6F-4497-AE87-613089BC459E} = {95AD4052-BC02-4560-A830-D3D2FCD9B5F3}
+		{FDA1DA60-D136-497F-8BE7-A62B9C06A6A8} = {2643745E-FE6F-4497-AE87-613089BC459E}
+		{9D6D73EE-F3E7-4EAD-9E08-BCC11AB18673} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
+		{09147DBD-5A59-41A5-9C15-2A9D9FC631FC} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
+		{9275544C-4CA4-4FE5-BA11-60309D987721} = {0B03EB4D-16E1-410B-BFBA-8546BE851E33}
+		{E01265DD-9513-4CCB-93FC-6E7A2F429E25} = {9275544C-4CA4-4FE5-BA11-60309D987721}
+		{B9BBDC24-EB0D-4E14-8529-99B13F322110} = {0B03EB4D-16E1-410B-BFBA-8546BE851E33}
+		{6F7F5B67-26C2-45DA-B1B7-7EF522530FA2} = {9275544C-4CA4-4FE5-BA11-60309D987721}
+		{773FDD11-249D-4BFF-80CF-0C7453622108} = {9275544C-4CA4-4FE5-BA11-60309D987721}
+		{798DF1DC-9E90-4A31-A6B6-063F01E5F901} = {F1A59FC3-416D-467A-902F-EE66C6E5DC32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A64E32F-9478-4890-979A-AB596FDC2711}
