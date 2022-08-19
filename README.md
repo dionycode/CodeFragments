@@ -1,7 +1,7 @@
 
 # CodeFragments
 
-This is a repository is a collection of my programming notes and code tests
+This repository is a collection of my programming notes and code tests
 
 ### FrontEnd Programming
 - HTML

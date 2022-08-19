@@ -13,11 +13,11 @@ namespace TestConsoleApp1
             return Tuple.Create(x1, x2);
         }
 
-        public static void Main(string[] args)
-        {
-            Tuple<double, double> roots = QuadraticEquation.FindRoots(2, 10, 8);
-            Console.WriteLine("Roots: " + roots.Item1 + ", " + roots.Item2);
-        }
+        //public static void Main(string[] args)
+        //{
+        //    Tuple<double, double> roots = QuadraticEquation.FindRoots(2, 10, 8);
+        //    Console.WriteLine("Roots: " + roots.Item1 + ", " + roots.Item2);
+        //}
     }
 
 }
