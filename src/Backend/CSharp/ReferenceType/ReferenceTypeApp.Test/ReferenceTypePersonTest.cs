@@ -1,11 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace BasicConsoleApp.Test
+namespace ReferenceTypeApp.Test
 {
-    [TestClass]
-    public class ReferenceTypeTest
+    public class ReferenceTypePersonTest
     {
-        [TestMethod]
+        [Fact]
         public void ObjectReferenceTestValue()
         {
             // Arrange
@@ -15,7 +12,7 @@ namespace BasicConsoleApp.Test
             valueType2 = 5;
 
 
-            var referenceType1 = new ReferenceType();
+            var referenceType1 = new ReferenceTypePerson();
             referenceType1.Name = "Steve";
 
             var referenceType2 = referenceType1;
@@ -26,10 +23,10 @@ namespace BasicConsoleApp.Test
             // Assert
 
             // The value of valueType1 should remain 3
-            Assert.AreEqual(3, valueType1);
+            Assert.Equal(3, valueType1);
 
             // The value of referenceType1 should be "Clint" 
-            Assert.AreEqual("Clint", referenceType1.Name);
+            Assert.Equal("Clint", referenceType1.Name);
         }
     }
 }

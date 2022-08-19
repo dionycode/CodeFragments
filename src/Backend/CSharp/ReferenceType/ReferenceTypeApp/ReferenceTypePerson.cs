@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace BasicConsoleApp
+namespace ReferenceTypeApp
 {
-    public class ReferenceType
+    public class ReferenceTypePerson
     {
         public string Name { get; set; }
     }
