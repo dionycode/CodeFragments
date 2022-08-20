@@ -1,5 +1,29 @@
 ﻿
+using VariableApp;
+
 Console.WriteLine("This is Variable App");
+
+// Built-in Types
+int integerVariable = 0;
+float floatVariable = 0;
+decimal decimalVariable = 0;
+double doubleVariable = 0;
+
+
+bool boolVariable = false;
+char charVariable = 'd';
+string stringVariable = "string value";
+
+// Custom Types
+//  Can be created using
+//  - class
+//  - struc
+//  - interface
+//  - enum 
+//  - record
+VariableClass myVariableClass = new VariableClass();
+VariableStruct myVariableStruct = new VariableStruct();
+
 
 // Integer
 // Algebraic Equation: 

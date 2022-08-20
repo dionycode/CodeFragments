@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VariableApp
 {
-    public class VariableClass
+    public struct VariableStruct
     {
         public int MyIntegerProperty { get; set; }
         public string MyStringProperty { get; set; }
