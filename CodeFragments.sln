@@ -59,27 +59,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01Variables", "01Variables"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTAPI31", "src\Backend\RESTAPI\RESTAPI31\RESTAPI31.csproj", "{670C3EFD-75FE-43DE-95B9-6070564F12C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariableApp", "src\Backend\CSharp\01Variables\VariableApp\VariableApp.csproj", "{B46D921D-8A47-445C-83CB-30155DA15B1C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariableApp.Test", "src\Backend\CSharp\01Variables\VariableApp.Test\VariableApp.Test.csproj", "{7D3ABB6B-77D5-4006-9E6B-37FFBE0AEE06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticModifiers", "StaticModifiers", "{BEE57450-BA00-482C-A1DF-F7091021AEE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticModifiersApp", "src\Backend\CSharp\StaticModifiers\StaticModifiersApp\StaticModifiersApp.csproj", "{3EB450C2-CC9E-429C-86D7-37B667B24EF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticModifiersApp", "src\Backend\CSharp\StaticModifiers\StaticModifiersApp\StaticModifiersApp.csproj", "{3EB450C2-CC9E-429C-86D7-37B667B24EF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticModifiersApp.Test", "src\Backend\CSharp\StaticModifiers\StaticModifiersApp.Test\StaticModifiersApp.Test.csproj", "{3E20F67E-895E-4FF5-BC3C-7F5A5205F13B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticModifiersApp.Test", "src\Backend\CSharp\StaticModifiers\StaticModifiersApp.Test\StaticModifiersApp.Test.csproj", "{3E20F67E-895E-4FF5-BC3C-7F5A5205F13B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferenceType", "ReferenceType", "{5D37C464-A62B-4501-8CA3-285AA15C672C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenceTypeApp", "src\Backend\CSharp\ReferenceType\ReferenceTypeApp\ReferenceTypeApp.csproj", "{079CF6DE-70B8-4C15-8E70-C82470163510}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceTypeApp", "src\Backend\CSharp\ReferenceType\ReferenceTypeApp\ReferenceTypeApp.csproj", "{079CF6DE-70B8-4C15-8E70-C82470163510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenceTypeApp.Test", "src\Backend\CSharp\ReferenceType\ReferenceTypeApp.Test\ReferenceTypeApp.Test.csproj", "{D936079F-7FD6-4D28-8275-A675C7C438B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceTypeApp.Test", "src\Backend\CSharp\ReferenceType\ReferenceTypeApp.Test\ReferenceTypeApp.Test.csproj", "{D936079F-7FD6-4D28-8275-A675C7C438B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02Decision", "02Decision", "{6F0419AA-DB3E-4E6E-9442-4D15D5B4580D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionApp", "src\Backend\CSharp\02Decision\DecisionApp\DecisionApp.csproj", "{6A7AF985-657C-42CA-B4FA-08ACBDA8A0C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecisionApp", "src\Backend\CSharp\02Decision\DecisionApp\DecisionApp.csproj", "{6A7AF985-657C-42CA-B4FA-08ACBDA8A0C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionApp.Test", "src\Backend\CSharp\02Decision\DecisionApp.Test\DecisionApp.Test.csproj", "{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecisionApp.Test", "src\Backend\CSharp\02Decision\DecisionApp.Test\DecisionApp.Test.csproj", "{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariableApp", "src\Backend\CSharp\01Variables\VariableApp\VariableApp.csproj", "{C25DCDB2-1AAD-41CB-A938-877FA513B97D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,10 +107,6 @@ Global
 		{670C3EFD-75FE-43DE-95B9-6070564F12C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{670C3EFD-75FE-43DE-95B9-6070564F12C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{670C3EFD-75FE-43DE-95B9-6070564F12C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B46D921D-8A47-445C-83CB-30155DA15B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B46D921D-8A47-445C-83CB-30155DA15B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B46D921D-8A47-445C-83CB-30155DA15B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B46D921D-8A47-445C-83CB-30155DA15B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D3ABB6B-77D5-4006-9E6B-37FFBE0AEE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D3ABB6B-77D5-4006-9E6B-37FFBE0AEE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D3ABB6B-77D5-4006-9E6B-37FFBE0AEE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -139,6 +135,10 @@ Global
 		{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C25DCDB2-1AAD-41CB-A938-877FA513B97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25DCDB2-1AAD-41CB-A938-877FA513B97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25DCDB2-1AAD-41CB-A938-877FA513B97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25DCDB2-1AAD-41CB-A938-877FA513B97D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,7 +163,6 @@ Global
 		{378B1B22-4C03-4B48-836D-8404AF5344CC} = {F1A59FC3-416D-467A-902F-EE66C6E5DC32}
 		{377E0ABB-107F-4A54-926D-80988D081D7C} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
 		{670C3EFD-75FE-43DE-95B9-6070564F12C4} = {3A6E5BE4-B35C-4D53-836A-B87841899611}
-		{B46D921D-8A47-445C-83CB-30155DA15B1C} = {377E0ABB-107F-4A54-926D-80988D081D7C}
 		{7D3ABB6B-77D5-4006-9E6B-37FFBE0AEE06} = {377E0ABB-107F-4A54-926D-80988D081D7C}
 		{BEE57450-BA00-482C-A1DF-F7091021AEE3} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
 		{3EB450C2-CC9E-429C-86D7-37B667B24EF5} = {BEE57450-BA00-482C-A1DF-F7091021AEE3}
@@ -174,6 +173,7 @@ Global
 		{6F0419AA-DB3E-4E6E-9442-4D15D5B4580D} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
 		{6A7AF985-657C-42CA-B4FA-08ACBDA8A0C6} = {6F0419AA-DB3E-4E6E-9442-4D15D5B4580D}
 		{5B0BF0BA-B627-4DE1-ADFB-0C312177F78A} = {6F0419AA-DB3E-4E6E-9442-4D15D5B4580D}
+		{C25DCDB2-1AAD-41CB-A938-877FA513B97D} = {377E0ABB-107F-4A54-926D-80988D081D7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A64E32F-9478-4890-979A-AB596FDC2711}
