@@ -16,4 +16,9 @@ namespace VariableApp
             return $" {MyIntegerProperty.ToString()} - {MyStringProperty} ";
         }
     }
+
+    public class ChildClass : VariableClass
+    { 
+        public int ChildIntegerProperty { get; set; }
+    }
 }
