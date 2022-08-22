@@ -13,7 +13,7 @@ namespace VariableApp
 
         public string MyStringMethod()
         { 
-            return $" {MyIntegerProperty.ToString()} - {MyStringProperty} ";
+            return $" {MyIntegerProperty} - {MyStringProperty} ";
         }
     }
 }
