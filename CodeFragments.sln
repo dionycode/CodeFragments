@@ -91,13 +91,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06Strings", "06Strings", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07DateAndTime", "07DateAndTime", "{8DF80AEA-9BAA-4DEB-8665-528FF31E2A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysApp", "src\Backend\CSharp\05Arrays\ArraysApp\ArraysApp.csproj", "{17A94CFB-9DF8-4FA7-BD79-58F2FDFE96B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraysApp", "src\Backend\CSharp\05Arrays\ArraysApp\ArraysApp.csproj", "{17A94CFB-9DF8-4FA7-BD79-58F2FDFE96B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysApp.Test", "src\Backend\CSharp\05Arrays\ArraysApp.Test\ArraysApp.Test.csproj", "{7660BA92-AA43-49AB-A3F1-438DE2263AA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraysApp.Test", "src\Backend\CSharp\05Arrays\ArraysApp.Test\ArraysApp.Test.csproj", "{7660BA92-AA43-49AB-A3F1-438DE2263AA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateAndTimeApp", "src\Backend\CSharp\07DateAndTime\DateAndTimeApp\DateAndTimeApp.csproj", "{D65F82C5-4854-4E5A-B38D-AA0B6D34F137}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateAndTimeApp", "src\Backend\CSharp\07DateAndTime\DateAndTimeApp\DateAndTimeApp.csproj", "{D65F82C5-4854-4E5A-B38D-AA0B6D34F137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateAndTimeApp.Test", "src\Backend\CSharp\07DateAndTime\DateAndTimeApp.Test\DateAndTimeApp.Test.csproj", "{FB4C8DD0-FC4A-498C-879F-6B18DE51ABD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateAndTimeApp.Test", "src\Backend\CSharp\07DateAndTime\DateAndTimeApp.Test\DateAndTimeApp.Test.csproj", "{FB4C8DD0-FC4A-498C-879F-6B18DE51ABD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
