@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using DelegateClassLibrary;
+
+var methodWithCallback = new DelegateCallbackFunctionClass();
+
+methodWithCallback.LongRunningProcess(PrintProgressCallback);
+
+
+static void PrintProgressCallback(int i)
+{
+    Console.WriteLine($"Current Counter {i}");
+}
+
