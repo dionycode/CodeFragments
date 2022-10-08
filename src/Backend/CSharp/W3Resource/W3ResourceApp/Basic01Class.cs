@@ -309,5 +309,165 @@ namespace W3ResourceApp
 
         }
 
+        public static string Exercise35_CheckIntergerOrder(int number1, int number2)
+        {
+            if (number1 < number2)
+            {
+                return "The pair is in ascending order";
+            }
+            else
+            {
+                return "The pair is in descending order";
+            }
+        }
+
+        public static string Exercise36_CheckPassword(string password)
+        {
+            var secretPassword = "1234";
+
+            if (password == secretPassword)
+            {
+                return "Correct password";
+            }
+            else
+            {
+                return "Incorrect password";
+            }
+        }
+
+        public static string Exercise37_FindQuadrant(int x, int y)
+        {
+            if (x > 0 && y > 0)
+            {
+                return "Quadrant-I (+,+)";
+            }
+            else if (x < 0 && y > 0)
+            {
+                return "Quadrant-II (-,+)";
+            }
+            else if (x < 0 && y < 0)
+            {
+                return "Quadrant-III (-,-)";
+            }
+            else if (x > 0 && y < 0)
+            {
+                return "Quadrant-IV (+,-)";
+            }
+            else return null;
+        }
+
+        public static (double? result, string message) Exercise38_Division(int number1, int number2)
+        {
+            if (number2 == 0)
+            {
+                return (null, "Division not possible");
+            }
+            else
+            {
+                double _result = (double)number1 / (double)number2;
+
+                return (_result, "Success");
+            }
+        }
+
+        public static int Exercise39_SumOfNumbersNotDivisibleBy17(int number1, int number2)
+        {
+            int sum = 0;
+
+            var lowerLimit = number1;
+            var upperLimit = number2;
+
+            if (number2 < number1)
+            {
+                lowerLimit = number2;
+                upperLimit = number1;
+            }
+
+            for (var i = lowerLimit; i <= upperLimit; i++)
+            {
+                if (i % 17 != 0)
+                {
+                    sum += i;
+                }
+            }
+
+            return sum;
+
+        }
+
+        public static int[] Exercise40_NumbersDividedBy7(int number1, int number2)
+        {
+            List<int> numbers = new List<int>();
+
+            var lowerLimit = number1;
+            var upperLimit = number2;
+
+            if (number2 < number1)
+            {
+                lowerLimit = number2;
+                upperLimit = number1;
+            }
+
+            for (var i = lowerLimit; i < upperLimit; i++)
+            {
+                if (i % 7 == 2 || i % 7 == 3)
+                {
+                    numbers.Add(i);
+                }
+            }
+
+            return numbers.ToArray();
+
+        }
+
+        public static int[,] Exercise41_Create3ColumnMatrix(int numberLines)
+        {
+            int[,] numbers = new int[numberLines, 3];
+
+            int counter = 1;
+            for (var i = 0; i < numberLines; i++)
+            {
+                for (var j = 0; j < 3; j++)
+                {
+                    numbers[i,j] = counter;
+                    counter++;
+                }
+            }
+
+            return numbers;
+        }
+
+        public static int[,] Exercise42_CreateSquareCubeMatrix(int numberLines)
+        {
+            int[,] numbers = new int[numberLines, 3];
+
+            int counter = 1;
+            for (var i = 0; i < numberLines; i++)
+            {                
+                numbers[i, 0] = counter;
+                numbers[i, 1] = counter * counter;
+                numbers[i, 2] = counter * counter * counter;
+                counter++;
+            }
+
+            return numbers;
+        }
+   
+        public static int[,] Exercise43_CreateNumberMatrix(int rows, int cols)
+        {
+            int[,] numbers = new int[rows, cols];
+
+            int counter = 1;
+            for (var i = 0; i < rows; i++)
+            {
+                for (var j = 0; j < cols; j++)
+                {
+                    numbers[i, j] = counter;
+                    counter++;
+                }
+            }
+
+            return numbers;
+        }
     }
 }

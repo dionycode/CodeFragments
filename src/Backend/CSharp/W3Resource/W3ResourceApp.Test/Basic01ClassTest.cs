@@ -357,5 +357,169 @@ namespace W3ResourceApp.Test
             Assert.Equal(expectedOddNumbers, result.oddNumbers);
             Assert.Equal(expectedSum, result.sumOfOddNumbers);
         }
+
+        [Theory]
+        [InlineData(1, 2, "The pair is in ascending order")]
+        [InlineData(5, 2, "The pair is in descending order")]
+        public void Exercise35_CheckIntergerOrder_Test(int number1, int number2, string expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise35_CheckIntergerOrder(number1, number2);
+
+            // Assert
+            Assert.Equal(expectedResult, result);
+
+        }
+
+        [Theory]
+        [InlineData("1234", "Correct password")]
+        [InlineData("1324", "Incorrect password")]
+        public void Exercise36_CheckPassword_Test(string password, string expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise36_CheckPassword(password);
+
+            // Assert
+            Assert.Equal(expectedResult, result);
+
+        }
+
+        [Theory]
+        [InlineData(2,3, "Quadrant-I (+,+)")]
+        [InlineData(-4,5, "Quadrant-II (-,+)")]
+        [InlineData(-6,-7, "Quadrant-III (-,-)")]
+        [InlineData(8,-9, "Quadrant-IV (+,-)")]
+        public void Exercise37_FindQuadrant_Test(int x, int y, string expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise37_FindQuadrant(x, y);
+
+            // Assert
+            Assert.Equal(expectedResult, result);
+
+        }
+
+
+        [Theory]
+        [InlineData(2, 0, null, "Division not possible")]
+        [InlineData(8, 4, 2.0, "Success")]
+        public void Exercise38_Division_Test(int number1, int number2, double? expectedResult, string expectedResultMessage)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise38_Division(number1, number2);
+
+            // Assert
+            Assert.Equal(expectedResult, result.result);
+            Assert.Equal(expectedResultMessage, result.message);
+
+        }
+
+        [Theory]
+        [InlineData(50, 99, 3521)]
+        public void Exercise39_SumOfNumbersNotDivisibleBy17_Test(int number1, int number2, int expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise39_SumOfNumbersNotDivisibleBy17(number1, number2);
+
+            // Assert
+            Assert.Equal(expectedResult, result);
+
+        }
+
+        [Theory]
+        [InlineData(25, 45, new int[] { 30, 31, 37, 38, 44 })]
+        public void Exercise40_NumbersDividedBy7_Test(int number1, int number2, int[] expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var result = Basic01Class.Exercise40_NumbersDividedBy7(number1, number2);
+
+            // Assert
+            Assert.Equal(expectedResult.Length, result.Length);
+            for (var i = 0; i < expectedResult.Length; i++)
+            {
+                Assert.Equal(expectedResult[i], result[i]);
+            }
+        }
+
+        [Fact]
+        public void Exercise41_Create3ColumnMatrix_Test()
+        {
+            // Arrange
+            var lines = 3;
+            var expectedResult = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            // Act
+            var result = Basic01Class.Exercise41_Create3ColumnMatrix(lines);
+
+            // Assert
+            Assert.Equal(expectedResult.Length, result.Length);
+            for (var i = 0; i < 3; i++)
+            {
+                for (var j = 0; j < 3; j++)
+                {
+                    Assert.Equal(expectedResult[i,j], result[i,j]);
+                }
+                
+            }
+        }
+
+
+        [Fact]
+        public void Exercise42_CreateSquareCubeMatrix_Test()
+        {
+            // Arrange
+            var lines = 3;
+            var expectedResult = new int[,] { { 1, 1, 1 }, { 2, 4, 8 }, { 3, 9, 27 } };
+            // Act
+            var result = Basic01Class.Exercise42_CreateSquareCubeMatrix(lines);
+
+            // Assert
+            Assert.Equal(expectedResult.Length, result.Length);
+            for (var i = 0; i < 3; i++)
+            {
+                for (var j = 0; j < 3; j++)
+                {
+                    Assert.Equal(expectedResult[i, j], result[i, j]);
+                }
+
+            }
+        }
+
+        [Fact]
+        public void Exercise43_CreateNumberMatrix_Test()
+        {
+            // Arrange
+            var rows = 3;
+            var cols = 3;
+            var expectedResult = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            // Act
+            var result = Basic01Class.Exercise43_CreateNumberMatrix(rows, cols);
+
+            // Assert
+            Assert.Equal(expectedResult.Length, result.Length);
+            for (var i = 0; i < rows; i++)
+            {
+                for (var j = 0; j < cols; j++)
+                {
+                    Assert.Equal(expectedResult[i, j], result[i, j]);
+                }
+
+            }
+        }
+
+
     }
 }
