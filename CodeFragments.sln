@@ -111,11 +111,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W3ResourceApp.Test", "src\B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delegate", "Delegate", "{7E78C9A4-429B-462B-8F77-11566C1F252B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateClassLibrary", "src\Backend\CSharp\Delegate\DelegateClassLibrary\DelegateClassLibrary.csproj", "{67CC7F53-C518-47CD-999D-BC2100747C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateClassLibrary", "src\Backend\CSharp\Delegate\DelegateClassLibrary\DelegateClassLibrary.csproj", "{67CC7F53-C518-47CD-999D-BC2100747C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateApp", "src\Backend\CSharp\Delegate\DelegateApp\DelegateApp.csproj", "{A3A6607B-AEDE-4B8F-9E4D-A64593CCC510}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateApp", "src\Backend\CSharp\Delegate\DelegateApp\DelegateApp.csproj", "{A3A6607B-AEDE-4B8F-9E4D-A64593CCC510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateApp.Test", "src\Backend\CSharp\Delegate\DelegateApp.Test\DelegateApp.Test.csproj", "{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateApp.Test", "src\Backend\CSharp\Delegate\DelegateApp.Test\DelegateApp.Test.csproj", "{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccessModifiers", "AccessModifiers", "{36DA8502-CB1C-425F-88C4-5A9A434D71DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiersApp", "src\Backend\CSharp\AccessModifiers\AccessModifiersApp\AccessModifiersApp.csproj", "{A1E51600-CF60-41B9-94CB-40853ACD61F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiersClassLibrary", "src\Backend\CSharp\AccessModifiers\AccessModifiersClassLibrary\AccessModifiersClassLibrary.csproj", "{DDA6DF26-3736-4B34-A78D-FF0A04FED501}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{5FA41839-3B91-434A-A27E-7E530F44A8A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +227,14 @@ Global
 		{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E51600-CF60-41B9-94CB-40853ACD61F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E51600-CF60-41B9-94CB-40853ACD61F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E51600-CF60-41B9-94CB-40853ACD61F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E51600-CF60-41B9-94CB-40853ACD61F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA6DF26-3736-4B34-A78D-FF0A04FED501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA6DF26-3736-4B34-A78D-FF0A04FED501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA6DF26-3736-4B34-A78D-FF0A04FED501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA6DF26-3736-4B34-A78D-FF0A04FED501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +288,10 @@ Global
 		{67CC7F53-C518-47CD-999D-BC2100747C34} = {7E78C9A4-429B-462B-8F77-11566C1F252B}
 		{A3A6607B-AEDE-4B8F-9E4D-A64593CCC510} = {7E78C9A4-429B-462B-8F77-11566C1F252B}
 		{6F94CA24-79EE-48B0-BCF2-7D1F02FDCD5D} = {7E78C9A4-429B-462B-8F77-11566C1F252B}
+		{36DA8502-CB1C-425F-88C4-5A9A434D71DB} = {1B2CB7D6-84C2-4414-A6C1-6BBC1B879958}
+		{A1E51600-CF60-41B9-94CB-40853ACD61F8} = {36DA8502-CB1C-425F-88C4-5A9A434D71DB}
+		{DDA6DF26-3736-4B34-A78D-FF0A04FED501} = {36DA8502-CB1C-425F-88C4-5A9A434D71DB}
+		{5FA41839-3B91-434A-A27E-7E530F44A8A5} = {9275544C-4CA4-4FE5-BA11-60309D987721}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A64E32F-9478-4890-979A-AB596FDC2711}
