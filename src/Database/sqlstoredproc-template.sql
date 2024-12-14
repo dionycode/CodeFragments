@@ -11,3 +11,14 @@ DELIMITER $$
     END$$
 
 DELIMITER ;
+
+
+
+-- Condition
+--  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+
+-- Parameters
+/*
+        IN `SecurityTenantId` CHAR(36),
+        IN `SecurityCompanyId` CHAR(36)
+*/
