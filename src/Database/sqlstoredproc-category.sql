@@ -10,8 +10,8 @@ DELIMITER $$
         IN `Active` TINYINT, 
         IN `CreatedBy` LONGTEXT, 
         IN `DateCreated` DATETIME(6),
-        IN `TenantId` CHAR(36),
-        IN `CompanyId` CHAR(36))
+        IN `SecurityTenantId` CHAR(36),
+        IN `SecurityCompanyId` CHAR(36))
     BEGIN
         -- Validate input parameters
         IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
