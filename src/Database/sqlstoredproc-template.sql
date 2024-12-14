@@ -14,6 +14,9 @@ DELIMITER ;
 
 
 
+-- Drop if Exist
+-- DROP procedure IF EXISTS `sp_CreateCategory`;
+
 -- Condition
 --  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
 

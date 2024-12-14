@@ -90,6 +90,12 @@ DELIMITER $$
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
     BEGIN
+        -- Validate input parameters
+        IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Invalid tenant filter input parameters';
+        END IF;
+
+        -- Query with tenant and company filters
 		UPDATE EstimateDetailSalesTaxes SET 
             EstimateDetailID = EstimateDetailID, 
             Rate = Rate,
@@ -110,6 +116,12 @@ DELIMITER $$
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
 	BEGIN
+        -- Validate input parameters
+        IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Invalid tenant filter input parameters';
+        END IF;
+
+        -- Query with tenant and company filters
 		DELETE FROM EstimateDetailSalesTaxes 
         WHERE ID = EstimateDetailSalesTaxID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     End$$
