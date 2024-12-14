@@ -1,5 +1,5 @@
 DELIMITER $$
-    -- Create a new stored procedure
+    -- REPLACE WITH CREATE STORED PROCEDURE STATEMENT --
     BEGIN
         -- Validate input parameters
         IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
@@ -7,6 +7,7 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
+        -- REPLACE WITH STORED PROCEDURE --
     END$$
 
 DELIMITER ;
