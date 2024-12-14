@@ -91,7 +91,19 @@ DELIMITER ;
 DROP procedure IF EXISTS `sp_UpdateContacts`;
 
 DELIMITER $$
-    -- Create a new stored procedure
+    CREATE PROCEDURE `sp_UpdateContacts`(
+        IN `CustomerId` INT, 
+        IN `Firstname` VARCHAR(50),
+        IN `Lastname` VARCHAR(50),
+        IN `Email` VARCHAR(100),
+        IN `Phone` VARCHAR(20),
+        IN `Fax` VARCHAR(20),
+        IN `IsActive` TINYINT(1), 
+        IN `UpdatedBy` LONGTEXT, 
+        IN `DateUpdated` DATETIME(6), 
+        IN `ContactId` INT,
+        IN `SecurityTenantId` CHAR(36),
+        IN `SecurityCompanyId` CHAR(36))
     BEGIN
         -- Validate input parameters
         IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
@@ -99,21 +111,29 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
+        UPDATE Contacts SET 
+            CustomerId = CustomerId, 
+            Firstname = Firstname, 
+            Lastname = Lastname, 
+            Email = Email, 
+            Phone = Phone, 
+            Fax = Fax, 
+            IsActive = IsActive, 
+            UpdatedBy = UpdatedBy, 
+            DateUpdated = DateUpdated 
+            WHERE ID=ContactId  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
-
-DELIMITER $$
-CREATE PROCEDURE `sp_UpdateContacts`(IN `CustomerId` INT, IN `Firstname` VARCHAR(50),IN `Lastname` VARCHAR(50),IN `Email` VARCHAR(100),IN `Phone` VARCHAR(20),IN `Fax` VARCHAR(20),IN `IsActive` TINYINT(1), IN `UpdatedBy` LONGTEXT, IN `DateUpdated` DATETIME(6), IN `ContactId` INT)
-UPDATE Contacts SET CustomerId = CustomerId, Firstname = Firstname, Lastname = Lastname, Email = Email, Phone = Phone, Fax = Fax, IsActive = IsActive, UpdatedBy = UpdatedBy, DateUpdated = DateUpdated WHERE ID=ContactId$$
-DELIMITER ;
-
 
 /*sp_DeleteContacts*/
 DROP procedure IF EXISTS `sp_DeleteContacts`;
 
 DELIMITER $$
-    -- Create a new stored procedure
+    CREATE PROCEDURE `sp_DeleteContacts`(
+        IN `ContactId` INT,
+        IN `SecurityTenantId` CHAR(36),
+        IN `SecurityCompanyId` CHAR(36))
     BEGIN
         -- Validate input parameters
         IF SecurityTenantId IS NULL OR SecurityCompanyId IS NULL THEN
@@ -121,11 +141,7 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
+        DELETE FROM Contacts WHERE Id=ContactId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
-DELIMITER ;
-
-DELIMITER $$
-CREATE PROCEDURE `sp_DeleteContacts`(IN `ContactId` INT)
-DELETE FROM Contacts WHERE Id=ContactId$$
 DELIMITER ;
