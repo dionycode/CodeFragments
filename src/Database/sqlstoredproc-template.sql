@@ -15,13 +15,13 @@ DELIMITER ;
 
 
 -- Drop if Exist
--- DROP procedure IF EXISTS `sp_CreateCategory`;
+-- DROP PROCEDURE IF EXISTS `sp_CreateCategory`;
 
 -- Condition
 --  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
 
 -- Parameters
-/*
+/*,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36)
 */
