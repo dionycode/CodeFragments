@@ -1,5 +1,5 @@
 /*sp_CreateCurrency*/
-DROP procedure IF EXISTS `sp_CreateCurrency`;
+DROP PROCEDURE IF EXISTS `sp_CreateCurrency`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateCurrency`(
@@ -42,7 +42,7 @@ DELIMITER ;
 
 
 /*sp_GetCurrencyById*/
-DROP procedure IF EXISTS `sp_GetCurrencyById`;
+DROP PROCEDURE IF EXISTS `sp_GetCurrencyById`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetCurrencyById`(
@@ -74,7 +74,7 @@ DELIMITER ;
 
 
 /*sp_UpdateCurrency*/
-DROP procedure IF EXISTS `sp_UpdateCurrency`;
+DROP PROCEDURE IF EXISTS `sp_UpdateCurrency`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateCurrency`(
@@ -106,7 +106,7 @@ DELIMITER ;
 
 
 /*sp_DeleteCurrency*/
-DROP procedure IF EXISTS `sp_DeleteCurrency`;
+DROP PROCEDURE IF EXISTS `sp_DeleteCurrency`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_DeleteCurrency`(

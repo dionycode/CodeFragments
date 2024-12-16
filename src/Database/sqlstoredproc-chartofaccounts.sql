@@ -1,6 +1,6 @@
 
 /*sp_CreateChartofAccounts*/
-DROP procedure IF EXISTS `sp_CreateChartOfAccounts`;
+DROP PROCEDURE IF EXISTS `sp_CreateChartOfAccounts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateChartOfAccounts` (
@@ -51,7 +51,7 @@ DELIMITER ;
 
 
 /*p_GetChartofAccountsById*/
-DROP procedure IF EXISTS `sp_GetChartOfAccountsById`;
+DROP PROCEDURE IF EXISTS `sp_GetChartOfAccountsById`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetChartOfAccountsById`(
@@ -86,7 +86,7 @@ DELIMITER ;
 
 
 /*sp_UpdateChartofAccounts*/
-DROP procedure IF EXISTS `sp_UpdateChartOfAccounts`;
+DROP PROCEDURE IF EXISTS `sp_UpdateChartOfAccounts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateChartOfAccounts` (
@@ -124,7 +124,7 @@ DELIMITER ;
 
 
 /*sp_DeleteChartofAccounts*/
-DROP procedure IF EXISTS `sp_DeleteChartOfAccounts`;
+DROP PROCEDURE IF EXISTS `sp_DeleteChartOfAccounts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_DeleteChartOfAccounts` (

@@ -82,7 +82,7 @@ DELIMITER ;
 
 
 /*sp_UpdateEstimateDetailsByID*/
-DROP procedure IF EXISTS `sp_UpdateEstimateDetailsByID`;
+DROP PROCEDURE IF EXISTS `sp_UpdateEstimateDetailsByID`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateEstimateDetailsByID` (
@@ -119,7 +119,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*sp_DeleteEstimateDetailsByID*/
-DROP procedure IF EXISTS `sp_DeleteEstimateDetailsByID`;
+DROP PROCEDURE IF EXISTS `sp_DeleteEstimateDetailsByID`;
 
 DELIMITER $$
     CREATE PROCEDURE sp_DeleteEstimateDetailsByID (

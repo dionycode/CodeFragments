@@ -1,5 +1,5 @@
 /*sp_CreateContacts*/
-DROP procedure IF EXISTS `sp_CreateContacts`;
+DROP PROCEDURE IF EXISTS `sp_CreateContacts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateContacts`(
@@ -54,7 +54,7 @@ DELIMITER ;
 
 
 /*sp_GetContactsById*/
-DROP procedure IF EXISTS `sp_GetContactsById`;
+DROP PROCEDURE IF EXISTS `sp_GetContactsById`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetContactsById`(
@@ -88,7 +88,7 @@ DELIMITER ;
 
 
 /*sp_UpdateContacts*/
-DROP procedure IF EXISTS `sp_UpdateContacts`;
+DROP PROCEDURE IF EXISTS `sp_UpdateContacts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateContacts`(
@@ -127,7 +127,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*sp_DeleteContacts*/
-DROP procedure IF EXISTS `sp_DeleteContacts`;
+DROP PROCEDURE IF EXISTS `sp_DeleteContacts`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_DeleteContacts`(

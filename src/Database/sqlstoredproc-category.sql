@@ -1,6 +1,6 @@
 
 /*Update sp_CreateCategory*/
-DROP procedure IF EXISTS `sp_CreateCategory`;
+DROP PROCEDURE IF EXISTS `sp_CreateCategory`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateCategory`(
@@ -42,7 +42,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*Update sp_GetCategoryById*/
-DROP procedure IF EXISTS `sp_GetCategoryById`;
+DROP PROCEDURE IF EXISTS `sp_GetCategoryById`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetCategoryById`(
@@ -74,7 +74,7 @@ DELIMITER ;
 
 
 /*Update sp_GetCategoryByName*/
-DROP procedure IF EXISTS `sp_GetCategoryByName`;
+DROP PROCEDURE IF EXISTS `sp_GetCategoryByName`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetCategoryByName`(
@@ -106,7 +106,7 @@ DELIMITER ;
 
 
 /*Update sp_GetCategoryIsUniqueName*/
-DROP procedure IF EXISTS `sp_GetCategoryIsUniqueName`;
+DROP PROCEDURE IF EXISTS `sp_GetCategoryIsUniqueName`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetCategoryIsUniqueName`(
@@ -133,7 +133,7 @@ DELIMITER ;
 
 
 /*Update sp_UpdateCategory*/
-DROP procedure IF EXISTS `sp_UpdateCategory`;
+DROP PROCEDURE IF EXISTS `sp_UpdateCategory`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateCategory`(
@@ -167,7 +167,7 @@ DELIMITER ;
 
 
 /*Update sp_DeleteCategory*/
-DROP procedure IF EXISTS `sp_DeleteCategory`;
+DROP PROCEDURE IF EXISTS `sp_DeleteCategory`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_DeleteCategory`(
@@ -189,7 +189,7 @@ DELIMITER ;
 
 
 /*Update sp_GetCategoryDescendants*/
-DROP procedure IF EXISTS `sp_GetCategoryDescendants`;
+DROP PROCEDURE IF EXISTS `sp_GetCategoryDescendants`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetCategoryDescendants`(
@@ -221,7 +221,7 @@ DELIMITER ;
 
 
 /*Update sp_GetCategoryNonDescendants*/
-DROP procedure IF EXISTS `sp_GetCategoryNonDescendants`;
+DROP PROCEDURE IF EXISTS `sp_GetCategoryNonDescendants`;
 
 
 DELIMITER $$

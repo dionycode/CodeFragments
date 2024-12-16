@@ -1,5 +1,5 @@
 /*sp_CreateBillingAddress*/
-DROP procedure IF EXISTS `sp_CreateBillingAddress`;
+DROP PROCEDURE IF EXISTS `sp_CreateBillingAddress`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateBillingAddress`(
@@ -58,7 +58,7 @@ DELIMITER ;
 
 
 /*sp_GetBillingAddressById*/
-DROP procedure IF EXISTS `sp_GetBillingAddressById`;
+DROP PROCEDURE IF EXISTS `sp_GetBillingAddressById`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_GetBillingAddressById`(
@@ -94,7 +94,7 @@ DELIMITER ;
 
 
 /*sp_UpdateBillingAddress*/
-DROP procedure IF EXISTS `sp_UpdateBillingAddress`;
+DROP PROCEDURE IF EXISTS `sp_UpdateBillingAddress`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_UpdateBillingAddress`(
@@ -137,7 +137,7 @@ DELIMITER $$
 DELIMITER ;
 
 /*sp_DeleteBillingAddress*/
-DROP procedure IF EXISTS `sp_DeleteBillingAddress`;
+DROP PROCEDURE IF EXISTS `sp_DeleteBillingAddress`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_DeleteBillingAddress`(

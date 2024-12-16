@@ -1,5 +1,5 @@
 /*sp_CreateEstimateDetailSalesTaxes*/
-DROP procedure IF EXISTS `sp_CreateEstimateDetailSalesTaxes`;
+DROP PROCEDURE IF EXISTS `sp_CreateEstimateDetailSalesTaxes`;
 
 DELIMITER $$
     CREATE PROCEDURE `sp_CreateEstimateDetailSalesTaxes`(
