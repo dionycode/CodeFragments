@@ -1,9 +1,9 @@
 
-/*sp_CreateChartofAccounts*/
-DROP PROCEDURE IF EXISTS `sp_CreateChartOfAccounts`;
+/*sp_CreateChartofAccount*/
+DROP PROCEDURE IF EXISTS `sp_CreateChartOfAccount`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateChartOfAccounts` (
+    CREATE PROCEDURE `sp_CreateChartOfAccount` (
         IN `Account` INT, 
         IN `Description` VARCHAR(200), 
         IN `Type` VARCHAR(100), 
@@ -50,11 +50,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*p_GetChartofAccountsById*/
-DROP PROCEDURE IF EXISTS `sp_GetChartOfAccountsById`;
+/*p_GetChartofAccountById*/
+DROP PROCEDURE IF EXISTS `sp_GetChartOfAccountById`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetChartOfAccountsById`(
+    CREATE PROCEDURE `sp_GetChartOfAccountById`(
         IN `ChartOfAccountId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -85,11 +85,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*sp_UpdateChartofAccounts*/
-DROP PROCEDURE IF EXISTS `sp_UpdateChartOfAccounts`;
+/*sp_UpdateChartofAccount*/
+DROP PROCEDURE IF EXISTS `sp_UpdateChartOfAccount`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateChartOfAccounts` (
+    CREATE PROCEDURE `sp_UpdateChartOfAccount` (
         IN `Account` INT, 
         IN `Description` VARCHAR(200), 
         IN `Type` VARCHAR(100), 
@@ -123,11 +123,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*sp_DeleteChartofAccounts*/
-DROP PROCEDURE IF EXISTS `sp_DeleteChartOfAccounts`;
+/*sp_DeleteChartofAccount*/
+DROP PROCEDURE IF EXISTS `sp_DeleteChartOfAccount`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_DeleteChartOfAccounts` (
+    CREATE PROCEDURE `sp_DeleteChartOfAccount` (
         IN `ChartOfAccountId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -138,7 +138,8 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        DELETE FROM ChartOfAccounts WHERE Id = ChartOfAccountId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        DELETE FROM ChartOfAccounts 
+        WHERE Id = ChartOfAccountId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

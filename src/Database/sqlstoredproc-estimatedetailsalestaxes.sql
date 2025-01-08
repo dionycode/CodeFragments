@@ -1,8 +1,8 @@
-/*sp_CreateEstimateDetailSalesTaxes*/
-DROP PROCEDURE IF EXISTS `sp_CreateEstimateDetailSalesTaxes`;
+/*sp_CreateEstimateDetailSalesTax*/
+DROP PROCEDURE IF EXISTS `sp_CreateEstimateDetailSalesTax`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateEstimateDetailSalesTaxes`(
+    CREATE PROCEDURE `sp_CreateEstimateDetailSalesTax`(
         IN `EstimateDetailID` INT,
         IN `Rate` DECIMAL(18, 2),
         IN `SalesTaxID` INT,
@@ -42,11 +42,11 @@ DELIMITER $$
 
 DELIMITER ;
 
-/*sp_GetEstimateDetailSalesTaxesByID*/
-DROP PROCEDURE IF EXISTS `sp_GetEstimateDetailSalesTaxesByID`;
+/*sp_GetEstimateDetailSalesTaxByID*/
+DROP PROCEDURE IF EXISTS `sp_GetEstimateDetailSalesTaxByID`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetEstimateDetailSalesTaxesByID` (
+    CREATE PROCEDURE `sp_GetEstimateDetailSalesTaxByID` (
         IN `EstimateDetailSalesTaxID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -68,18 +68,18 @@ DELIMITER $$
             DateCreated,
             UpdatedBy,
             DateUpdated
-            FROM EstimateDetailSalesTaxes 
-            WHERE Id = EstimateDetailSalesTaxID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        FROM EstimateDetailSalesTaxes 
+        WHERE Id = EstimateDetailSalesTaxID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
 
-/*sp_UpdateEstimateDetailSalesTaxes*/
-DROP PROCEDURE IF EXISTS `sp_UpdateEstimateDetailSalesTaxes`;
+/*sp_UpdateEstimateDetailSalesTax*/
+DROP PROCEDURE IF EXISTS `sp_UpdateEstimateDetailSalesTax`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateEstimateDetailSalesTaxes` (
+    CREATE PROCEDURE `sp_UpdateEstimateDetailSalesTax` (
 	    IN `EstimateDetailSalesTaxID` INT,
 	    IN `EstimateDetailID` INT,
 	    IN `Rate` DECIMAL(18, 2) ,
@@ -103,12 +103,12 @@ DELIMITER $$
             IsActive = IsActive,
             UpdatedBy = UpdatedBy,
             DateUpdated = DateUpdated
-            WHERE Id = EstimateDetailSalesTaxID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE Id = EstimateDetailSalesTaxID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 DELIMITER ;
 
-/*sp_DeleteEstimateDetailSalesTaxes*/
-DROP procedure IF EXISTS `sp_DeleteEstimateDetailSalesTaxes`;
+/*sp_DeleteEstimateDetailSalesTax*/
+DROP procedure IF EXISTS `sp_DeleteEstimateDetailSalesTax`;
 
 DELIMITER $$
     CREATE PROCEDURE sp_DeleteEstimateDetailSalesTaxes (

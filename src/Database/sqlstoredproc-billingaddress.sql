@@ -51,6 +51,7 @@ DELIMITER $$
             DateCreated,
             SecurityTenantId,
             SecurityCompanyId);
+
         SELECT LAST_INSERT_ID();
     END$$
 
@@ -87,7 +88,8 @@ DELIMITER $$
             DateCreated,
             UpdatedBy,
             DateUpdated
-        FROM BillingAddress WHERE ID=BillingId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        FROM BillingAddress 
+        WHERE ID=BillingId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
@@ -151,7 +153,8 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        DELETE FROM BillingAddress WHERE Id=BillingId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        DELETE FROM BillingAddress 
+        WHERE Id=BillingId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

@@ -1,8 +1,8 @@
-/*sp_CreateEstimateDetails*/
-DROP PROCEDURE IF EXISTS `sp_CreateEstimateDetails`;
+/*sp_CreateEstimateDetail*/
+DROP PROCEDURE IF EXISTS `sp_CreateEstimateDetail`;
 
 DELIMITER $$
-     CREATE PROCEDURE `sp_CreateEstimateDetails`(
+     CREATE PROCEDURE `sp_CreateEstimateDetail`(
         IN `EstimateID` INT,
         IN `ProductID` INT ,
         IN `Description` VARCHAR(200),
@@ -31,28 +31,28 @@ DELIMITER $$
             DateCreated,
             TenantId,
             CompanyId)
-            VALUES (
-                EstimateID, 
-                ProductID, 
-                Description, 
-                Quantity, 
-                Price, 
-                IsActive, 
-                CreatedBy, 
-                DateCreated,
-                SecurityTenantId,
-                SecurityCompanyId);
+        VALUES (
+            EstimateID, 
+            ProductID, 
+            Description, 
+            Quantity, 
+            Price, 
+            IsActive, 
+            CreatedBy, 
+            DateCreated,
+            SecurityTenantId,
+            SecurityCompanyId);
         
         SELECT LAST_INSERT_ID();
     END$$
 
 DELIMITER ;
 
-/*sp_GetEstimateDetailsByID*/
-DROP PROCEDURE IF EXISTS `sp_GetEstimateDetailsByID`;
+/*sp_GetEstimateDetailByID*/
+DROP PROCEDURE IF EXISTS `sp_GetEstimateDetailByID`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetEstimateDetailsByID` (
+    CREATE PROCEDURE `sp_GetEstimateDetailByID` (
         IN `EstimateDetailsID` int,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -74,18 +74,18 @@ DELIMITER $$
             DateCreated,
             UpdatedBy,
             DateUpdated
-            FROM EstimateDetails 
-            WHERE ID = EstimateDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        FROM EstimateDetails 
+        WHERE ID = EstimateDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
 
-/*sp_UpdateEstimateDetailsByID*/
-DROP PROCEDURE IF EXISTS `sp_UpdateEstimateDetailsByID`;
+/*sp_UpdateEstimateDetail*/
+DROP PROCEDURE IF EXISTS `sp_UpdateEstimateDetail`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateEstimateDetailsByID` (
+    CREATE PROCEDURE `sp_UpdateEstimateDetail` (
         IN `EstimateDetailsID` INT,
         IN `EstimateID` INT,
         IN `ProductID` INT ,
@@ -106,23 +106,23 @@ DELIMITER $$
 
         -- Query with tenant and company filters
         UPDATE EstimateDetails SET
-	    EstimateID = EstimateID, 
-        ProductID = ProductID, 
-        Quantity = Quantity, 
-        Price = Price, 
-        IsActive = IsActive,
-        UpdatedBy = UpdatedBy,
-        DateUpdated = DateUpdated
+            EstimateID = EstimateID, 
+            ProductID = ProductID, 
+            Quantity = Quantity, 
+            Price = Price, 
+            IsActive = IsActive,
+            UpdatedBy = UpdatedBy,
+            DateUpdated = DateUpdated
         WHERE ID = EstimateDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
-/*sp_DeleteEstimateDetailsByID*/
-DROP PROCEDURE IF EXISTS `sp_DeleteEstimateDetailsByID`;
+/*sp_DeleteEstimateDetail*/
+DROP PROCEDURE IF EXISTS `sp_DeleteEstimateDetail`;
 
 DELIMITER $$
-    CREATE PROCEDURE sp_DeleteEstimateDetailsByID (
+    CREATE PROCEDURE sp_DeleteEstimateDetail (
         IN `EstimateDetailsID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -133,7 +133,8 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        DELETE FROM EstimateDetails WHERE ID = EstimateDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        DELETE FROM EstimateDetails 
+        WHERE ID = EstimateDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

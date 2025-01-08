@@ -1,8 +1,8 @@
-/*sp_CreateContacts*/
-DROP PROCEDURE IF EXISTS `sp_CreateContacts`;
+/*sp_CreateContact*/
+DROP PROCEDURE IF EXISTS `sp_CreateContact`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateContacts`(
+    CREATE PROCEDURE `sp_CreateContact`(
         IN `CustomerId` INT, 
         IN `Firstname` VARCHAR(50),
         IN `Lastname` VARCHAR(50),
@@ -23,29 +23,29 @@ DELIMITER $$
 
         -- Query with tenant and company filters
         INSERT INTO Contacts(
-                CustomerId, 
-                Firstname, 
-                Lastname, 
-                Email, 
-                Phone, 
-                Fax, 
-                IsActive, 
-                CreatedBy, 
-                DateCreated,
-                TenantId,
-                CompanyId) 
-            VALUES (
-                CustomerId, 
-                Firstname, 
-                Lastname, 
-                Email, 
-                Phone, 
-                Fax, 
-                IsActive, 
-                CreatedBy, 
-                DateCreated,
-                SecurityTenantId,
-                SecurityCompanyId);
+            CustomerId, 
+            Firstname, 
+            Lastname, 
+            Email, 
+            Phone, 
+            Fax, 
+            IsActive, 
+            CreatedBy, 
+            DateCreated,
+            TenantId,
+            CompanyId) 
+        VALUES (
+            CustomerId, 
+            Firstname, 
+            Lastname, 
+            Email, 
+            Phone, 
+            Fax, 
+            IsActive, 
+            CreatedBy, 
+            DateCreated,
+            SecurityTenantId,
+            SecurityCompanyId);
 
         SELECT LAST_INSERT_ID();
     END$$
@@ -53,11 +53,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*sp_GetContactsById*/
-DROP PROCEDURE IF EXISTS `sp_GetContactsById`;
+/*sp_GetContactById*/
+DROP PROCEDURE IF EXISTS `sp_GetContactById`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetContactsById`(
+    CREATE PROCEDURE `sp_GetContactById`(
         IN `ContactId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -87,11 +87,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*sp_UpdateContacts*/
-DROP PROCEDURE IF EXISTS `sp_UpdateContacts`;
+/*sp_UpdateContact*/
+DROP PROCEDURE IF EXISTS `sp_UpdateContact`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateContacts`(
+    CREATE PROCEDURE `sp_UpdateContact`(
         IN `CustomerId` INT, 
         IN `Firstname` VARCHAR(50),
         IN `Lastname` VARCHAR(50),
@@ -121,16 +121,16 @@ DELIMITER $$
             IsActive = IsActive, 
             UpdatedBy = UpdatedBy, 
             DateUpdated = DateUpdated 
-            WHERE ID=ContactId  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID=ContactId  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
-/*sp_DeleteContacts*/
-DROP PROCEDURE IF EXISTS `sp_DeleteContacts`;
+/*sp_DeleteContact*/
+DROP PROCEDURE IF EXISTS `sp_DeleteContact`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_DeleteContacts`(
+    CREATE PROCEDURE `sp_DeleteContact`(
         IN `ContactId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -141,7 +141,8 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        DELETE FROM Contacts WHERE Id=ContactId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        DELETE FROM Contacts 
+        WHERE Id=ContactId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

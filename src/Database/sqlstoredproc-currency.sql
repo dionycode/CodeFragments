@@ -26,15 +26,16 @@ DELIMITER $$
             DateCreated,
             TenantId,
             CompanyId) 
-            VALUES (
-                Name, 
-                ShortName, 
-                Symbol, 
-                0, 
-                CreatedBy, 
-                DateCreated,
-                SecurityTenantId,
-                SecurityCompanyId);
+        VALUES (
+            Name, 
+            ShortName, 
+            Symbol, 
+            0, 
+            CreatedBy, 
+            DateCreated,
+            SecurityTenantId,
+            SecurityCompanyId);
+
         SELECT LAST_INSERT_ID();
     END$$
 
@@ -67,7 +68,7 @@ DELIMITER $$
             DateCreated,
             DateUpdated
         FROM Currency 
-        WHERE ID=CurrencyId  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID=CurrencyId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
@@ -99,7 +100,7 @@ DELIMITER $$
             Symbol = Symbol, 
             UpdatedBy = UpdatedBy, 
             DateUpdated = DateUpdated 
-            WHERE ID=CurrencyId  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID=CurrencyId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

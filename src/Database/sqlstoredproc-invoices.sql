@@ -1,10 +1,10 @@
-/*sp_CreateEstimate*/
-DROP PROCEDURE IF EXISTS `sp_CreateEstimate`;
+/*sp_CreateInvoice*/
+DROP PROCEDURE IF EXISTS `sp_CreateInvoice`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateEstimate`(
-		IN `EstimateNumber` VARCHAR(20),
-		IN `CustomerRef` VARCHAR(20),
+    CREATE PROCEDURE `sp_CreateInvoice`(
+		IN `InvoiceNumber` VARCHAR(20),
+		IN `PONumber` VARCHAR(20),
 		IN `Date`   DATETIME(6),
 		IN `DueDate` DATETIME(6),
 		IN `Notes` varchar(200),
@@ -26,9 +26,9 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        INSERT INTO Estimates (
-            EstimateNumber, 
-            CustomerRef, 
+        INSERT INTO Invoices (
+            InvoiceNumber, 
+            PONumber, 
             Date, 
             DueDate, 
             Notes, 
@@ -44,8 +44,8 @@ DELIMITER $$
             TenantId,
             CompanyId) 
         VALUES (
-            EstimateNumber, 
-            CustomerRef, 
+            InvoiceNumber, 
+            PONumber, 
             Date(Date), 
             Date(DueDate), 
             Notes, 
@@ -59,19 +59,19 @@ DELIMITER $$
             CreatedBy, 
             DateCreated,
             SecurityTenantId,
-            SecurityCompanyId);
+            SecurityCompanyId);	
 
 		SELECT LAST_INSERT_ID();
     END$$
 
 DELIMITER ;
 
-/*sp_GetEstimateByID*/
-DROP PROCEDURE IF EXISTS `sp_GetEstimateByID`;
+/*sp_GetInvoiceByID*/
+DROP PROCEDURE IF EXISTS `sp_GetInvoiceByID`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetEstimateByID` (
-        IN `EstimatesID` INT,
+    CREATE PROCEDURE `sp_GetInvoiceByID` (
+        IN `InvoiceID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
     BEGIN
@@ -83,8 +83,8 @@ DELIMITER $$
         -- Query with tenant and company filters
         SELECT 
             ID,
-            EstimateNumber, 
-            CustomerRef, 
+            InvoiceNumber, 
+            PONumber, 
             Date, 
             DueDate, 
             Notes, 
@@ -97,22 +97,22 @@ DELIMITER $$
             IsActive, 
             CreatedBy, 
             DateCreated,
-            UpdatedBy, 
+            UpdatedBy,
             DateUpdated
-        FROM Estimates WHERE ID = EstimatesID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+		FROM Invoices 
+        WHERE ID = InvoiceID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
-
-/*sp_UpdateEstimate*/
-DROP PROCEDURE IF EXISTS `sp_UpdateEstimate`;
+/*sp_UpdateInvoice*/
+DROP PROCEDURE IF EXISTS `sp_UpdateInvoice`;
 
 DELIMITER $$
-    CREATE PROCEDURE  `sp_UpdateEstimate` (
-        IN `EstimatesID` INT,
-        IN `EstimateNumber` VARCHAR(20), ## Assumed this column is a custom field (format and auto increment)
-        IN `CustomerRef` VARCHAR(20) ,
+    CREATE PROCEDURE  `sp_UpdateInvoice` (
+        IN `InvoiceID` INT,
+        IN `InvoiceNumber` VARCHAR(20), ## Assumed this column is a custom field (format and auto increment)
+        IN `PONumber` VARCHAR(20) ,
         IN `Date`   DATETIME(6) ,
         IN `DueDate` DATETIME(6) ,
         IN `Notes` VARCHAR(200),
@@ -134,9 +134,9 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        UPDATE Estimates 
-			SET EstimateNumber = EstimateNumber,
-			CustomerRef = CustomerRef,
+        UPDATE Invoices SET 
+            InvoiceNumber = InvoiceNumber,
+			PONumber = PONumber,
 			Date = Date(Date),
 			DueDate = Date(DueDate),
 			Notes = Notes,
@@ -149,18 +149,17 @@ DELIMITER $$
 			IsActive = IsActive,
 			UpdatedBy = UpdatedBy,
 			DateUpdated = DateUpdated
-        WHERE ID = EstimatesID  AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID = InvoiceID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
-
-/*sp_DeleteEstimate*/
-DROP PROCEDURE IF EXISTS `sp_DeleteEstimate`;
+/*sp_DeleteInvoice*/
+DROP PROCEDURE IF EXISTS `sp_DeleteInvoice`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_DeleteEstimate` (
-        IN `EstimatesID` INT,
+    CREATE PROCEDURE `sp_DeleteInvoice` (
+        IN `InvoiceID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
     BEGIN
@@ -170,8 +169,8 @@ DELIMITER $$
         END IF;
 
         -- Query with tenant and company filters
-        DELETE FROM Estimates 
-        WHERE ID = EstimatesID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        DELETE FROM Invoices 
+        WHERE ID = InvoiceID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;

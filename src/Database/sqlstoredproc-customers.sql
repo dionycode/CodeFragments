@@ -1,8 +1,8 @@
-/*sp_CreateCustomers*/
-DROP PROCEDURE IF EXISTS sp_CreateCustomers;
+/*sp_CreateCustomer*/
+DROP PROCEDURE IF EXISTS sp_CreateCustomer;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateCustomers`(
+    CREATE PROCEDURE `sp_CreateCustomer`(
         IN `CompanyName` VARCHAR(50), 
         IN `AccountNumber` VARCHAR(50), 
         IN `Website` VARCHAR(100), 
@@ -37,31 +37,32 @@ DELIMITER $$
             DateCreated,
             TenantId,
             CompanyId) 
-            VALUES (
-                CompanyName, 
-                AccountNumber, 
-                Website, 
-                Notes, 
-                ContactID, 
-                BillingID, 
-                IsSameShipping,
-                ShippingID, 
-                IsActive, 
-                CreatedBy, 
-                DateCreated,
-                SecurityTenantId,
-                SecurityCompanyId);
+        VALUES (
+            CompanyName, 
+            AccountNumber, 
+            Website, 
+            Notes, 
+            ContactID, 
+            BillingID, 
+            IsSameShipping,
+            ShippingID, 
+            IsActive, 
+            CreatedBy, 
+            DateCreated,
+            SecurityTenantId,
+            SecurityCompanyId);
+
         SELECT LAST_INSERT_ID();
     END$$
 
 DELIMITER ;
 
 
-/*sp_GetCustomersById*/
-DROP PROCEDURE IF EXISTS sp_GetCustomersById;
+/*sp_GetCustomerById*/
+DROP PROCEDURE IF EXISTS sp_GetCustomerById;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetCustomersById`(
+    CREATE PROCEDURE `sp_GetCustomerById`(
         IN `CustomerId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -93,11 +94,11 @@ DELIMITER $$
 
 DELIMITER ;
 
-/*sp_UpdateCustomers*/
-DROP PROCEDURE IF EXISTS sp_UpdateCustomers;
+/*sp_UpdateCustomer*/
+DROP PROCEDURE IF EXISTS sp_UpdateCustomer;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateCustomers`(
+    CREATE PROCEDURE `sp_UpdateCustomer`(
         IN `CompanyName` VARCHAR(50), 
         IN `AccountNumber` VARCHAR(50), 
         IN `Website` VARCHAR(100), 
@@ -131,17 +132,17 @@ DELIMITER $$
             IsActive = IsActive, 
             UpdatedBy = UpdatedBy, 
             DateUpdated = DateUpdated 
-            WHERE ID=CustomerId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID=CustomerId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
 
-/*sp_DeleteCustomers*/
-DROP PROCEDURE IF EXISTS sp_DeleteCustomers;
+/*sp_DeleteCustomer*/
+DROP PROCEDURE IF EXISTS sp_DeleteCustomer;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_DeleteCustomers`(
+    CREATE PROCEDURE `sp_DeleteCustomer`(
         IN `CustomerId` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))

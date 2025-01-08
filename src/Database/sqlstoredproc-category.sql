@@ -20,23 +20,24 @@ DELIMITER $$
 
         -- Insert data with tenant and company filters
         INSERT INTO Category(
-                Name, 
-                ParentId, 
-                Description, 
-                Active, 
-                CreatedBy, 
-                DateCreated,
-                TenantId,
-                CompanyId) 
-            VALUES (
-                Name, 
-                ParentId, 
-                Description, 
-                Active, 
-                CreatedBy, 
-                DateCreated,
-                SecurityTenantId,
-                SecurityCompanyId);
+            Name, 
+            ParentId, 
+            Description, 
+            Active, 
+            CreatedBy, 
+            DateCreated,
+            TenantId,
+            CompanyId) 
+        VALUES (
+            Name, 
+            ParentId, 
+            Description, 
+            Active, 
+            CreatedBy, 
+            DateCreated,
+            SecurityTenantId,
+            SecurityCompanyId);
+
         SELECT LAST_INSERT_ID();
     END$$
 DELIMITER ;

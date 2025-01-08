@@ -1,8 +1,8 @@
-/*sp_CreateInvoiceDetails*/
-DROP PROCEDURE IF EXISTS `sp_CreateInvoiceDetails`;
+/*sp_CreateInvoiceDetail*/
+DROP PROCEDURE IF EXISTS `sp_CreateInvoiceDetail`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_CreateInvoiceDetails` (
+    CREATE PROCEDURE `sp_CreateInvoiceDetail` (
 		IN `InvoiceID` INT,
 		IN `ProductID` INT,
 		IN `Description` VARCHAR(200),
@@ -31,17 +31,17 @@ DELIMITER $$
             DateCreated,
             TenantId,
             CompanyId)
-            VALUES(
-                InvoiceID,
-                ProductID,
-                Description,
-                Quantity,
-                Price,
-                IsActive,
-                CreatedBy,
-                Date(DateCreated),
-                SecurityTenantId,
-                SecurityCompanyId);
+        VALUES(
+            InvoiceID,
+            ProductID,
+            Description,
+            Quantity,
+            Price,
+            IsActive,
+            CreatedBy,
+            Date(DateCreated),
+            SecurityTenantId,
+            SecurityCompanyId);
 
 		SELECT LAST_INSERT_ID();
     END$$
@@ -49,11 +49,11 @@ DELIMITER $$
 DELIMITER ;
 
 
-/*sp_GetInvoiceDetailsByID*/
-DROP PROCEDURE IF EXISTS `sp_GetInvoiceDetailsByID`;
+/*sp_GetInvoiceDetailByID*/
+DROP PROCEDURE IF EXISTS `sp_GetInvoiceDetailByID`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_GetInvoiceDetailsByID`(
+    CREATE PROCEDURE `sp_GetInvoiceDetailByID`(
 		IN `InvoiceDetailsID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -76,18 +76,18 @@ DELIMITER $$
 			DateCreated,
 			UpdatedBy,
 			DateUpdated
-		    FROM InvoiceDetails 
-            WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+		FROM InvoiceDetails 
+        WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
 
-/*sp_UpdateInvoiceDetails*/
-DROP PROCEDURE IF EXISTS `sp_UpdateInvoiceDetails`;
+/*sp_UpdateInvoiceDetail*/
+DROP PROCEDURE IF EXISTS `sp_UpdateInvoiceDetail`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_UpdateInvoiceDetails`(
+    CREATE PROCEDURE `sp_UpdateInvoiceDetail`(
 		IN `InvoiceDetailsID` INT,
 		IN `InvoiceID` INT,
 		IN `ProductID` INT,
@@ -115,17 +115,17 @@ DELIMITER $$
 			IsActive = IsActive,
 			UpdatedBy = UpdatedBy,
 			DateUpdated = DateUpdated
-		    WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+		WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
 
 
-/*sp_DeleteInvoiceDetailsByID*/
-DROP PROCEDURE IF EXISTS `sp_DeleteInvoiceDetailsByID`;
+/*sp_DeleteInvoiceDetail*/
+DROP PROCEDURE IF EXISTS `sp_DeleteInvoiceDetail`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_DeleteInvoiceDetailsByID` (
+    CREATE PROCEDURE `sp_DeleteInvoiceDetail` (
         IN `InvoiceDetailsID` INT,
         IN `SecurityTenantId` CHAR(36),
         IN `SecurityCompanyId` CHAR(36))
@@ -137,7 +137,7 @@ DELIMITER $$
 
         -- Query with tenant and company filters
         DELETE FROM InvoiceDetails 
-            WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
+        WHERE ID = InvoiceDetailsID AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
