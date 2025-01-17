@@ -97,7 +97,7 @@ DELIMITER $$
 			UpdatedBy,
 			DateUpdated 
 		FROM Products 
-		WHERE ID=ProductId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId
+		WHERE ID=ProductId AND TenantId=SecurityTenantId AND CompanyId=SecurityCompanyId;
     END$$
 
 DELIMITER ;
